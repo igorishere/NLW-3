@@ -32,3 +32,17 @@ O projeto foi desenvolvido na **[Next Level Week](https://nextlevelweek.com/)**,
 - Typescript
 ---
 ## ⌨ Executando o Projeto
+
+Baixe o projeto na pasta de sua preferência
+```bash
+  git clone https://github.com/igorishere/NLW-3.git
+  
+  yarn install ou npm install
+``` 
+Para rodar o frontend na versão Web:
+```bash
+  cd frontend\web 
+  yarn start ou npm start
+```
+
+
