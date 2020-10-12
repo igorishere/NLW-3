@@ -1,5 +1,5 @@
 ## 📖 Next Level Weel #3
-O projeto foi desenvolvido durante a **[Next Level Week](https://nextlevelweek.com/)**,durante os dias 12  a 18  de Outubro de 2020, ministrada pela **[@Rocketseat](https://github.com/Rocketseat)**. O Intuito do projeto é desenvolver uma aplicação para unir grupos de pessoas com interesse em efetuar visitações a orfanatos. Será possível cadastrar os orfanatos da sua cidade, além de pesquisar os que existem na região e obter alguns detalhes sobre o mesmo.
+O projeto foi desenvolvido na **[Next Level Week](https://nextlevelweek.com/)**,evento que ocorreu durante os dias 12  a 18  de Outubro de 2020, ministrado pela **[@Rocketseat](https://github.com/Rocketseat)**. O Intuito do projeto é desenvolver uma aplicação para unir grupos de pessoas com interesse em efetuar visitações a orfanatos. Será possível cadastrar os orfanatos da sua cidade, além de pesquisar os que existem na região e obter alguns detalhes sobre o mesmo.
 
 ## 📋 Índice
 - [🖥 Preview](#-preview)
