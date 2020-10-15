@@ -43,15 +43,17 @@ O projeto foi desenvolvido na **[Next Level Week](https://nextlevelweek.com/)**,
 ---
 ## ⌨ Executando o Projeto
 
-Baixe o projeto na pasta de sua preferência
+Este repositório é um monorepo, onde vamos ter o código do backend,frontend e do app mobile, portanto, cada um terá suas próprias dependências que
+devem ser baixadas individualmente.
+
+Baixe o projeto:
 ```bash
   git clone https://github.com/igorishere/NLW-3.git
-  
-  yarn install ou npm install
 ``` 
 Para rodar o frontend na versão Web:
 ```bash
-  cd frontend\web 
+  cd frontend\web
+  yarn install ou npm install
   yarn start ou npm start
 ```
 Para executar o backend: 
