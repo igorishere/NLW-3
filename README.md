@@ -1,4 +1,4 @@
-## 📖 Next Level Weel #3
+## 📖 Happy  
 O projeto foi desenvolvido na **[Next Level Week](https://nextlevelweek.com/)**,evento que ocorreu durante os dias 12  a 18  de Outubro de 2020, ministrado pela **[@Rocketseat](https://github.com/Rocketseat)**. O Intuito do projeto é desenvolver uma aplicação para unir grupos de pessoas com interesse em efetuar visitações a orfanatos. Será possível cadastrar os orfanatos da sua cidade, além de pesquisar os que existem na região e obter alguns detalhes sobre o mesmo.
 
 ## 📋 Índice
@@ -27,21 +27,46 @@ O projeto foi desenvolvido na **[Next Level Week](https://nextlevelweek.com/)**,
 ---
 ## 🚀 Tecnologias 
 
-- React.js
-- Node.js 
-- Typescript
+- **Web**
+  - [React](https://reactjs.org/)
+  - [Typescript](https://www.typescriptlang.org/)
+  - [Leaflet](https://leafletjs.com/)
+  - [React Leaflet](https://react-leaflet.js.org/)
+  - [Open Street Map](https://www.openstreetmap.org/) ou [Mapbox](https://www.mapbox.com/) 
+
+- **Backend**
+  - [Nodejs](https://nodejs.org/en/)
+  - [Express](https://expressjs.com/) 
+  - [Typeorm](https://typeorm.io/)
+  - [Multer](https://github.com/expressjs/multer)
+  - [Yup](https://github.com/jquense/yup)
 ---
 ## ⌨ Executando o Projeto
 
-Baixe o projeto na pasta de sua preferência
+Este repositório é um monorepo, onde vamos ter o código do backend,frontend e do app mobile, portanto, cada um terá suas próprias dependências que
+devem ser baixadas individualmente.
+
+Baixe o projeto:
 ```bash
   git clone https://github.com/igorishere/NLW-3.git
-  
-  yarn install ou npm install
 ``` 
 Para rodar o frontend na versão Web:
 ```bash
-  cd frontend\web 
+  cd frontend\web
+  yarn install ou npm install
+  yarn start ou npm start
+```
+Para executar o backend: 
+```bash
+  cd backend\web 
+   yarn install ou npm install
+```
+Caso seja a primeira execução do backend, execute as migrations para atualizar o banco de dados:
+```bash
+  yarn typeorm migration:run 
+```
+Feito isso, para subir o servidor:
+```bash
   yarn start ou npm start
 ```
 
