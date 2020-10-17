@@ -40,15 +40,71 @@ Baixe o projeto na pasta de sua preferência
 ```bash
   git clone https://github.com/igorishere/NLW-3.git
 ``` 
+<details>
+
 <summary>Backend</summary>
+
 ```shell
-  
-  #Entre na pasta
-  cd backend
-  
-  #Atualize as dependências
-  yarn install ou npm install
+#Entre no diretório
+
+$ cd backend/
+
+#Atualize as dependências do projeto com Yarn ou Npm
+
+$ yarn install ou npm install
+
 ```
-<summary>Frontend Web</summary>
-<summary>Frontend Mobile</summary>
+
+#### Na primeira execução do backend, será necessário executar *migrations* para atualizar o banco de dados:
+
+```shell
+
+$ yarn typeorm migration:run
+
+
+```
+#### Por final, execute a aplicação que vai estar disponível no endereço [http://localhost:3333](http://localhost:3333)
+
+```shell
+
+$ yarn start 
+#ou 
+$ npm start
+
+```
+
+</details>
+
+<br/>
+
+<details>
+<summary>Web/Mobile</summary>
+
+#### Para o frontend na versão Web e Mobile, os passos serão os mesmos
+
+```shell
+
+$ cd web/
+#ou
+$ cd mobile/
+
+#Instalação das dependências
+
+$ yarn install 
+#ou 
+$ npm install
+
+```
+
+#### E por último
+
+```shell
+
+$ yarn start
+#ou
+$ npm start
+
+```
+
+</details>
 
