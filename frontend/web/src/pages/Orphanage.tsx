@@ -59,9 +59,20 @@ export default function Orphanage() {
       <Sidebar/>
 
       <main>
+        {/* style={{display: 'none'}} */}
+        {/* orphanage.images[activeImageIndex].url */}
         <div className="orphanage-details">
-          <img src={orphanage.images[activeImageIndex].url} alt={orphanage.name} />
-
+          <img 
+            src={ 
+              orphanage.images[0] !== undefined  ? 
+              orphanage.images[activeImageIndex].url
+              : 
+              'https://forums.autodesk.com/autodesk/attachments/autodesk/78/795255/1/Transparant.png'
+            }
+           style={ orphanage.images[0] !== undefined ? {display: 'block'} : {display: 'none'} } 
+           alt={orphanage.name}
+          />
+         
           <div className="images">
            {
              orphanage.images.map(
