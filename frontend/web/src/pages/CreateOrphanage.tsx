@@ -45,16 +45,17 @@ export default function CreateOrphanage() {
     }
 
     const selectedImages = Array.from(event.target.files);
-
-    setImages(selectedImages);
-
+ 
+    setImages([...images,...selectedImages]);
 
     const selectedImagesPreview =  selectedImages.map(
-      img => {return URL.createObjectURL(img)}
+      img => {
+        return URL.createObjectURL(img)
+      }
     )
 
-    setPreviewImages(selectedImagesPreview);
-    
+    setPreviewImages([...previewImages, ...selectedImagesPreview]);
+      
   }
 
   async function handleSubmit(event: FormEvent) {
@@ -80,7 +81,7 @@ export default function CreateOrphanage() {
 
     alert('Cadastro realizado com sucesso');
 
-    history.push('/app ');
+    history.push('/app');
   }
 
   return (
