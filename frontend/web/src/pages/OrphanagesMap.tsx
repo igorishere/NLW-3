@@ -13,6 +13,7 @@ import  "../styles/pages/orphanage-map.css";
 import api from '../services/api';
 
 import mapIcon from "../utils/mapIcon";
+import getGeolocationInformation from '../services/geolocation';
 
 
 interface Orphanage {
@@ -25,6 +26,11 @@ interface Orphanage {
 export default function OrphanagesMap() {
     // State do componente
     const [orphanages, setOrphanages] = useState<Orphanage[]>([]);
+    const [cidade,setCidade] = useState<String>('Carregando...');
+    const [estado,setEstado] = useState<String>('Carregando...');
+
+    const [latitudeUsuario,setLatitudeUsuario] = useState<number>(0);
+    const [longitudeUsuario,setLongitudeUsuario] = useState<number>(0);
 
         useEffect(()=>{
             api.get('/orphanages').then(
@@ -33,7 +39,17 @@ export default function OrphanagesMap() {
                     setOrphanages(response.data);
                 }
             )
+
+            getGeolocationInformation().then(  rsp => {
+                setCidade(rsp.city);
+                setEstado(rsp.state);
+                setLatitudeUsuario(rsp.latitude);
+                setLongitudeUsuario(rsp.longitude);
+            });
         },[])
+
+
+    
 
     return( 
         <div id="page-map">
@@ -49,14 +65,14 @@ export default function OrphanagesMap() {
 
 
                 <footer>
-                    <strong>Torres</strong>
+                    <strong>{cidade}</strong>
 
-                    <span>Rio Grande do Sul</span>
+                    <span>{estado}</span>
                 </footer>
             </aside>
 
             <Map
-            center={[ -29.3225049,-49.7794938 ]}
+            center={[ latitudeUsuario,longitudeUsuario ]} 
             zoom={13}
             style={
                 {

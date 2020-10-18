@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FormEvent, useState } from "react";
+import React, { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { Map, Marker, TileLayer } from 'react-leaflet'; 
 import { LeafletMouseEvent } from 'leaflet'; 
 
@@ -12,10 +12,14 @@ import Sidebar from "../components/Sidebar";
 import mapIcon from "../utils/mapIcon";
 import api from "../services/api";
 import { useHistory } from "react-router-dom";
+import getGeolocationInformation from "../services/geolocation";
 
 export default function CreateOrphanage() {
   // Estado do componente
   const [position, setPosition] = useState({latitude: 0, longitude: 0})
+  const [latitudeInicialMapa,setLatitudeInicialMapa] = useState<number>(0);
+  const [longitudeInicialMapa,setLongitudeInicialMapa] = useState<number>(0);
+
   // Estado do formulário
   const [name, setName] = useState('');
   const [about, setAbout] = useState('');
@@ -26,6 +30,13 @@ export default function CreateOrphanage() {
   const [previewImages, setPreviewImages] = useState<string[]>([]);
 
   const history = useHistory();
+
+  useEffect( ()=>{
+    getGeolocationInformation().then(  rsp => { 
+      setLatitudeInicialMapa(rsp.latitude);
+      setLongitudeInicialMapa(rsp.longitude);
+  });
+  },[] )
  
   function handleMapClick(event: LeafletMouseEvent ) {
     const {lat,lng} = event.latlng;
@@ -98,7 +109,7 @@ export default function CreateOrphanage() {
             <legend>Dados</legend>
 
             <Map 
-              center={[-27.2092052,-49.6401092]} 
+              center={[latitudeInicialMapa,longitudeInicialMapa]} 
               style={{ width: '100%', height: 280 }}
               zoom={15}
               onclick={handleMapClick}
