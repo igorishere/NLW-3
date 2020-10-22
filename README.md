@@ -40,6 +40,11 @@ O projeto foi desenvolvido na **[Next Level Week](https://nextlevelweek.com/)**,
   - [Typeorm](https://typeorm.io/)
   - [Multer](https://github.com/expressjs/multer)
   - [Yup](https://github.com/jquense/yup)
+
+- **Mobile**
+  - [Expo](https://expo.io/)
+  - [React Native](https://reactnative.dev/)
+  - [Axios](https://github.com/axios/axios)
 ---
 ## ⌨ Executando o Projeto
 
