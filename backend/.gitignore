@@ -9,3 +9,5 @@ yarn.lock
 !uploads/.gitkeep
 
 /src/database/database.sqlite
+
+.env
