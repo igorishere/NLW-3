@@ -55,29 +55,38 @@ Baixe o projeto:
 ```bash
   git clone https://github.com/igorishere/NLW-3.git
 ```
-Para executar o backend: 
+
+<details>
+<summary>Server</summary>
+
+#### Entre no diretório e baixe as dependências
+
 ```bash
   cd backend\web 
    yarn install ou npm install
 ```
 Caso seja a primeira execução do backend, execute as migrations para atualizar o banco de dados:
 ```bash
-  yarn typeorm migration:run 
+  yarn typeorm migration:run
+  # ou
+  npm typeorm migration:run
 ```
-Feito isso, para subir o servidor:
+Procure o arquiv **.env.exemple**, faça uma cópia e renomeie para **.env**,
+depois edite ele e coloque o IP da sua máquina
 ```bash
-  yarn start ou npm start
-Para rodar o frontend na versão Web:
-```bash
-  cd frontend\web
-  yarn install ou npm install
-  yarn start ou npm start
+   # SERVER HOST
+
+   SERVER_HOST = http://{seu Ip aqui}:3333
+   
+   # ex.: SERVER_HOST = http://192.168.0.1:3333
 ```
-<details>
-<summary>Server</summary>
 
-#### Apenas execute
-
+Feito isso, para subir o servidor execute:
+```bash
+  yarn start
+  # ou
+  npm start
+``` 
 </details> 
 
 <br />
@@ -85,7 +94,30 @@ Para rodar o frontend na versão Web:
 <details>
 <summary>Web</summary>
 
-#### Apenas execute
+Para rodar o frontend na versão Web:
+
+#### Entre no diretório
+```bash
+  cd frontend\web 
+```
+#### Baixe todas as dependências do projeto: 
+```bash 
+  yarn install ou npm install 
+```
+#### Procure o arquivo **.env.exemple**, faça uma cópia e renomeie para **.env**, depois edite ele e coloque o endereço do servidor criado antes
+```bash
+  # API
+  
+  REACT_APP_API_HOST = http://{ip do servidor}:3333
+  
+  ex.: REACT_APP_API_HOST = http://192.168.0.1:3333
+```
+#### Execute a aplicação
+```bash
+  yarn start 
+  # ou 
+  npm start
+```
 
 </details>
 
@@ -94,6 +126,32 @@ Para rodar o frontend na versão Web:
 <details>
 <summary>Mobile</summary>
 
-#### Apenas execute
+Para rodar o app Mobile da aplicação:
+
+#### Entre no diretório
+```bash
+  cd frontend\mobile 
+```
+#### Baixe todas as dependências do projeto: 
+```bash 
+  yarn install ou npm install 
+```
+#### Procure o arquivo **.env.exemple**, faça uma cópia e renomeie para **.env**, depois edite ele e coloque o endereço do servidor criado antes
+```bash
+  # API
+
+  API_HOST = http://{IP do servidor aqui}:3333
+  
+  ex.: API_HOST = http://192.168.0.1:3333
+```
+#### Execute a aplicação
+```bash
+  yarn start 
+  # ou 
+  npm start
+```
+#### Baixe o aplicativo do [Expo](https://expo.io/) no seu celular e escaneie o QRcode que será apresentado no servidor para rodar o app no dispositivo
+- Expo para [Android](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=pt_BR&gl=US)
+- Expo para [IOS](https://apps.apple.com/br/app/expo-client/id982107779) 
 
 </details>
