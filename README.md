@@ -65,14 +65,13 @@ Baixe o projeto:
   cd backend\web 
    yarn install ou npm install
 ```
-Caso seja a primeira execução do backend, execute as migrations para atualizar o banco de dados:
+#### Caso seja a primeira execução do backend, execute as migrations para atualizar o banco de dados:
 ```bash
   yarn typeorm migration:run
   # ou
   npm typeorm migration:run
 ```
-Procure o arquiv **.env.exemple**, faça uma cópia e renomeie para **.env**,
-depois edite ele e coloque o IP da sua máquina
+#### Procure o arquiv **.env.exemple**, faça uma cópia e renomeie para **.env**, depois edite ele e coloque o IP da sua máquina
 ```bash
    # SERVER HOST
 
@@ -81,7 +80,7 @@ depois edite ele e coloque o IP da sua máquina
    # ex.: SERVER_HOST = http://192.168.0.1:3333
 ```
 
-Feito isso, para subir o servidor execute:
+#### Feito isso, para subir o servidor execute:
 ```bash
   yarn start
   # ou
