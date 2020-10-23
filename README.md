@@ -54,12 +54,6 @@ devem ser baixadas individualmente.
 Baixe o projeto:
 ```bash
   git clone https://github.com/igorishere/NLW-3.git
-``` 
-Para rodar o frontend na versão Web:
-```bash
-  cd frontend\web
-  yarn install ou npm install
-  yarn start ou npm start
 ```
 Para executar o backend: 
 ```bash
@@ -73,6 +67,33 @@ Caso seja a primeira execução do backend, execute as migrations para atualizar
 Feito isso, para subir o servidor:
 ```bash
   yarn start ou npm start
+Para rodar o frontend na versão Web:
+```bash
+  cd frontend\web
+  yarn install ou npm install
+  yarn start ou npm start
 ```
+<details>
+<summary>Server</summary>
 
+#### Apenas execute
 
+</details> 
+
+<br />
+
+<details>
+<summary>Web</summary>
+
+#### Apenas execute
+
+</details>
+
+<br />
+
+<details>
+<summary>Mobile</summary>
+
+#### Apenas execute
+
+</details>
